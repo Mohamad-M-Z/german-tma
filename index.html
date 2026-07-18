@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Der / Die / Das - Time Attack</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- بارگذاری SDK رسمی تلگرام برای مینی‌اپ -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- هدر بازی: زمان و امتیاز -->
+        <header class="game-header">
+            <div class="stat-box">⏱ زمان: <span id="time-display">60</span>s</div>
+            <div class="stat-box">🔥 کامبو: x<span id="combo-display">1</span></div>
+            <div class="stat-box">🏆 امتیاز: <span id="score-display">0</span></div>
+        </header>
+
+        <!-- صفحه اصلی بازی -->
+        <main id="game-screen">
+            <div class="word-card">
+                <span id="word-level" class="badge">A1</span>
+                <h1 id="word-display">...</h1>
+                <p id="word-hint" class="hint">آماده‌سازی...</p>
+            </div>
+
+            <!-- دکمه‌های آرتیکل -->
+            <div class="button-group">
+                <button class="btn btn-der" onclick="checkAnswer('der')">Der 🔵</button>
+                <button class="btn btn-die" onclick="checkAnswer('die')">Die 🔴</button>
+                <button class="btn btn-das" onclick="checkAnswer('das')">Das 🟢</button>
+            </div>
+        </main>
+
+        <!-- صفحه پایان بازی (پنهان در ابتدای کار) -->
+        <section id="end-screen" class="hidden">
+            <h2>⏰ زمان تمام شد!</h2>
+            <p class="final-score">امتیاز نهایی: <span id="final-score">0</span></p>
+            <div class="wrong-words-section">
+                <h3>کلماتی که باید مرور کنی:</h3>
+                <ul id="wrong-words-list"></ul>
+            </div>
+            <button id="send-score-btn" class="btn-primary" onclick="sendDataToBot()">🚀 ثبت امتیاز در تلگرام</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

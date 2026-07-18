@@ -1,0 +1,138 @@
+:root {
+    --bg-color: var(--tg-theme-bg-color, #18222d);
+    --text-color: var(--tg-theme-text-color, #ffffff);
+    --card-bg: var(--tg-theme-secondary-bg-color, #232e3c);
+    --button-text: var(--tg-theme-button-text-color, #ffffff);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.word-card {
+    background: var(--card-bg);
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #4a90e2;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+#word-display {
+    font-size: 2.5rem;
+    margin: 15px 0 10px 0;
+    font-weight: 800;
+}
+
+.hint {
+    color: #8e9bb0;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.btn {
+    flex: 1;
+    padding: 18px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s active;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn-der { background-color: #3b82f6; }
+.btn-die { background-color: #ef4444; }
+.btn-das { background-color: #10b981; }
+
+.hidden { display: none !important; }
+
+#end-screen {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.wrong-words-section {
+    margin: 20px 0;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#wrong-words-list li {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
