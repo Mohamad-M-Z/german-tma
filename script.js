@@ -5,21 +5,7 @@ const tg = window.Telegram.WebApp;
 tg.expand();
 tg.ready();
 
-// دیتابیس نمونه (در نسخه واقعی می‌تونی صدها کلمه بذاری یا از API بخوانی)
-const wordsDatabase = [
-    { word: "Tisch", article: "der", plural: "die Tische", meaning: "میز", level: "A1" },
-    { word: "Katze", article: "die", plural: "die Katzen", meaning: "گربه", level: "A1" },
-    { word: "Buch", article: "das", plural: "die Bücher", meaning: "کتاب", level: "A1" },
-    { word: "Mädchen", article: "das", plural: "die Mädchen", meaning: "دختر (chen- همیشه das است)", level: "A1" },
-    { word: "Sonne", article: "die", plural: "die Sonnen", meaning: "خورشید", level: "A1" },
-    { word: "Auto", article: "das", plural: "die Autos", meaning: "ماشین", level: "A1" },
-    { word: "Hund", article: "der", plural: "die Hunde", meaning: "سگ", level: "A1" },
-    { word: "Wasser", article: "das", plural: "die Wässer", meaning: "آب", level: "A1" },
-    { word: "Zeit", article: "die", plural: "die Zeiten", meaning: "زمان", level: "A1" },
-    { word: "Apfel", article: "der", plural: "die Äpfel", meaning: "سیب", level: "A1" },
-    { word: "Freiheit", article: "die", plural: "die Freiheiten", meaning: "آزادی (heit- همیشه die است)", level: "B1" },
-    { word: "Schlüssel", article: "der", plural: "die Schlüssel", meaning: "کلید", level: "A2" }
-];
+
 
 // وضعیت بازی
 let score = 0;
